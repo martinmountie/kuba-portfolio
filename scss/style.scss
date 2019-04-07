@@ -1,0 +1,141 @@
+@font-face {
+    font-family: "TimesNewRamen-Regular";
+    src: url("../fonts/TimesNewRamen-Regular.eot");
+}
+
+@font-face {
+    font-family: "TimesNewRamen-Regular";
+    src: url("../fonts/TimesNewRamen-Regular.woff") format("woff"),
+    url("../fonts/TimesNewRamen-Regular.svg#TimesNewRamen-Regular") format("svg");
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    font-family: Arial;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    color: #000;
+    overflow: hidden;
+}
+h1.brand {
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+    padding: 0 0 15px 0;
+    a:hover {
+        font-weight: 700;
+    }
+}
+a {
+    color: #000;
+    text-decoration: none;
+    z-index: 99;
+    position: relative;
+    &.featered {
+        padding-top: 14px;
+        font-family: 'TimesNewRamen-Regular';
+    }
+    &.download {
+        padding-top: 14px;
+        text-decoration: underline;
+    }
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        position: relative;
+        z-index: 99;
+    }
+}
+h1, nav {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 99;
+}
+
+nav ul {
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    li {
+        margin-bottom: 4px;
+        position: relative;
+        height: 18px;
+        width: 100%;
+        a {
+            color: #000;
+            box-sizing: content-box;
+            text-decoration: none;
+            position: absolute;
+            width: auto;
+            left: 0px;
+            top: 0px;
+            white-space: nowrap;
+            &:hover {
+                right: 0px;
+                left: auto;
+                padding-left: 400px;
+                text-transform: none;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.contact ul li a:hover {
+    background: rgb(253, 253, 4);
+}
+span.highlighted {
+    background: rgb(253, 253, 4);
+}
+.contact {
+    font-size: 14px;
+}
+
+.container {
+    padding: 50px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lang-switcher {
+    right: 0px;
+    top: 0px;
+    a {
+        text-decoration: line-through;
+        color: #000;
+        z-index: 99;
+        position: relative;
+        &.active {
+            text-decoration: none;
+        }
+    }
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    &.bottom {
+        align-items: flex-end;
+    }
+}
+
+.works {
+    width: 610px;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    .work {
+        position: absolute;
+    }
+    img {
+        //max-width: 100%;
+    }
+}

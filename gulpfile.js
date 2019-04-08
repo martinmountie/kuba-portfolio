@@ -5,7 +5,7 @@ var gulp = require("gulp"),
     browserSync = require("browser-sync");
 
 gulp.task('sass', function () {
-    return gulp.src('./scss/**/style.scss')
+    return gulp.src('./scss/style.scss')
         .pipe(plumber())
         .pipe(sass.sync())
         .pipe(autoprefixer({

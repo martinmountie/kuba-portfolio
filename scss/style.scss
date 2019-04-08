@@ -14,13 +14,10 @@
 }
 html, body {
     font-family: Arial;
-    height: 100%;
-    width: 100%;
     padding: 0;
     margin: 0;
     font-size: 15px;
     color: #000;
-    overflow: hidden;
 }
 h1.brand {
     font-weight: 400;
@@ -37,7 +34,9 @@ a {
     z-index: 99;
     position: relative;
     &.featered {
-        padding-top: 14px;
+        padding-top: 20px;
+        font-size: 12px;
+        display: block;
         font-family: 'TimesNewRamen-Regular';
     }
     &.download {
@@ -59,13 +58,17 @@ h1, nav {
     position: relative;
     z-index: 99;
 }
-
-nav ul {
+.main-nav {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+.main-nav ul {
     position: relative;
-    display: inline-block;
+    display: block;
     width: 190px;
     li {
-        margin-bottom: 4px;
+        margin-bottom: 5px;
         position: relative;
         height: 18px;
         width: 100%;
@@ -78,7 +81,7 @@ nav ul {
             left: 0px;
             top: 0px;
             white-space: nowrap;
-            &:hover {
+            &.active, &:hover {
                 right: 0px;
                 left: auto;
                 padding-left: 400px;
@@ -88,8 +91,13 @@ nav ul {
         }
     }
 }
-.contact ul li a:hover {
-    background: rgb(253, 253, 4);
+.contact ul li {
+    &:hover {
+        text-decoration: underline;
+    }
+    a:hover {
+        background: rgb(253, 253, 4);
+    } 
 }
 span.highlighted {
     background: rgb(253, 253, 4);
@@ -105,24 +113,37 @@ span.highlighted {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &-main {
+        height: 100vh;
+    }
 }
 .lang-switcher {
-    right: 0px;
-    top: 0px;
+    text-align: right;
+    margin-bottom: 100px;
     a {
-        text-decoration: line-through;
         color: #000;
         z-index: 99;
         position: relative;
+        &:not(.active) {
+            text-decoration: line-through;
+        }
+        &:hover {
+            text-decoration: none;
+        }
         &.active {
             text-decoration: none;
         }
     }
 }
+.right-top {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
 .row {
     display: flex;
     justify-content: space-between;
-    &.bottom {
+    &-bottom {
         align-items: flex-end;
     }
 }
@@ -137,5 +158,15 @@ span.highlighted {
     }
     img {
         //max-width: 100%;
+    }
+}
+
+/***WORK***/
+.featured-work {
+    width: 100%;
+    &-image {
+        width: 100%;
+        position: relative;
+        margin-top: 46px;
     }
 }

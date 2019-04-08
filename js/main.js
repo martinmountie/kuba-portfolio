@@ -5,17 +5,20 @@ works.forEach(function(el) {
     dragElement(el);
 });
 
-var langSwitcher = document.querySelectorAll(".lang-switcher a");
+var langSwitcher = document.querySelectorAll(".lang-switcher a"),
+    notDefaultLang = document.querySelector(".lang-switcher a:not(.active)"),
+    defaultLang = document.querySelector(".lang-switcher a.active");
 
-Array.from(langSwitcher).forEach(function(lang) {
-    lang.addEventListener("click", function() {
-        langSwitcher[0].classList.toggle("active");
-        langSwitcher[1].classList.toggle("active");
-    });
+console.log(defaultLang);
+notDefaultLang.addEventListener("mouseout", function (e) {
+    defaultLang.classList.add("active");
+    notDefaultLang.classList.remove("active");
 });
 
-
-
+notDefaultLang.addEventListener("mouseover", function() {
+    notDefaultLang.classList.add("active");
+    defaultLang.classList.remove("active");
+});
 
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

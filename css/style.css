@@ -12,13 +12,10 @@
 
 html, body {
   font-family: Arial;
-  height: 100%;
-  width: 100%;
   padding: 0;
   margin: 0;
   font-size: 15px;
-  color: #000;
-  overflow: hidden; }
+  color: #000; }
 
 h1.brand {
   font-weight: 400;
@@ -34,7 +31,9 @@ a {
   z-index: 99;
   position: relative; }
   a.featered {
-    padding-top: 14px;
+    padding-top: 20px;
+    font-size: 12px;
+    display: block;
     font-family: 'TimesNewRamen-Regular'; }
   a.download {
     padding-top: 14px;
@@ -53,16 +52,21 @@ h1, nav {
   position: relative;
   z-index: 99; }
 
-nav ul {
+.main-nav {
+  position: fixed;
+  top: 50px;
+  left: 50px; }
+
+.main-nav ul {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 190px; }
-  nav ul li {
-    margin-bottom: 4px;
+  .main-nav ul li {
+    margin-bottom: 5px;
     position: relative;
     height: 18px;
     width: 100%; }
-    nav ul li a {
+    .main-nav ul li a {
       color: #000;
       -webkit-box-sizing: content-box;
               box-sizing: content-box;
@@ -72,12 +76,15 @@ nav ul {
       left: 0px;
       top: 0px;
       white-space: nowrap; }
-      nav ul li a:hover {
+      .main-nav ul li a.active, .main-nav ul li a:hover {
         right: 0px;
         left: auto;
         padding-left: 400px;
         text-transform: none;
         font-weight: bold; }
+
+.contact ul li:hover {
+  text-decoration: underline; }
 
 .contact ul li a:hover {
   background: #fdfd04; }
@@ -102,17 +109,27 @@ span.highlighted {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .container-main {
+    height: 100vh; }
 
 .lang-switcher {
-  right: 0px;
-  top: 0px; }
+  text-align: right;
+  margin-bottom: 100px; }
   .lang-switcher a {
-    text-decoration: line-through;
     color: #000;
     z-index: 99;
     position: relative; }
+    .lang-switcher a:not(.active) {
+      text-decoration: line-through; }
+    .lang-switcher a:hover {
+      text-decoration: none; }
     .lang-switcher a.active {
       text-decoration: none; }
+
+.right-top {
+  position: absolute;
+  top: 50px;
+  right: 50px; }
 
 .row {
   display: -webkit-box;
@@ -121,7 +138,7 @@ span.highlighted {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .row.bottom {
+  .row-bottom {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
@@ -133,3 +150,11 @@ span.highlighted {
   z-index: 1; }
   .works .work {
     position: absolute; }
+
+/***WORK***/
+.featured-work {
+  width: 100%; }
+  .featured-work-image {
+    width: 100%;
+    position: relative;
+    margin-top: 46px; }

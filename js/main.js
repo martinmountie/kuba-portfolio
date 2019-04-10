@@ -1,5 +1,5 @@
 //Make the DIV element draggagle:
-var works = document.querySelectorAll(".work");
+var works = document.querySelectorAll(".work-widget");
 
 works.forEach(function(el) {
     dragElement(el);
@@ -9,7 +9,6 @@ var langSwitcher = document.querySelectorAll(".lang-switcher a"),
     notDefaultLang = document.querySelector(".lang-switcher a:not(.active)"),
     defaultLang = document.querySelector(".lang-switcher a.active");
 
-console.log(defaultLang);
 notDefaultLang.addEventListener("mouseout", function (e) {
     defaultLang.classList.add("active");
     notDefaultLang.classList.remove("active");

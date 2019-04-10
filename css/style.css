@@ -188,7 +188,7 @@ span.highlighted {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    .work-left .work-inner:hover {
+    .work-left .work-inner img:hover {
       -webkit-transform: translate(10px, -10px);
           -ms-transform: translate(10px, -10px);
               transform: translate(10px, -10px); }
@@ -196,7 +196,7 @@ span.highlighted {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .work-center .work-inner:hover {
+    .work-center .work-inner img:hover {
       -webkit-transform: translate(10px, -10px);
           -ms-transform: translate(10px, -10px);
               transform: translate(10px, -10px); }
@@ -204,7 +204,7 @@ span.highlighted {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-    .work-right .work-inner:hover {
+    .work-right .work-inner img:hover {
       -webkit-transform: translate(-10px, -10px);
           -ms-transform: translate(-10px, -10px);
               transform: translate(-10px, -10px); }

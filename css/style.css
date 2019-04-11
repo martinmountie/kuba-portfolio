@@ -34,7 +34,13 @@ a {
     padding-top: 20px;
     font-size: 12px;
     display: block;
-    font-family: 'TimesNewRamen-Regular'; }
+    font-family: 'TimesNewRamen-Regular';
+    position: relative;
+    left: -50px;
+    padding-left: 50px; }
+    a.featered:hover {
+      left: 0px;
+      font-weight: bold; }
   a.download {
     padding-top: 14px;
     text-decoration: underline; }
@@ -97,20 +103,20 @@ span.highlighted {
 
 .container {
   padding: 0 50px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  width: 100%; }
   .container-main {
     padding: 50px; }
   .container-index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 50px;
     height: 100vh;
     overflow: hidden; }
@@ -153,6 +159,8 @@ span.highlighted {
   z-index: 1; }
   .works-widget .work-widget {
     position: absolute; }
+    .works-widget .work-widget:hover {
+      cursor: move; }
 
 /***WORK***/
 .featured-work {

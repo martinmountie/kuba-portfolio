@@ -38,6 +38,13 @@ a {
         font-size: 12px;
         display: block;
         font-family: 'TimesNewRamen-Regular';
+        position: relative;
+        left: -50px;
+        padding-left: 50px;
+        &:hover {
+            left: 0px;
+            font-weight: bold;
+        }
     }
     &.download {
         padding-top: 14px;
@@ -110,13 +117,13 @@ span.highlighted {
 .container {
     padding: 0 50px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     &-main {
         padding: 50px;
     }
     &-index {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 50px;
         height: 100vh;
         overflow: hidden;
@@ -160,6 +167,9 @@ span.highlighted {
     z-index: 1;
     .work-widget {
         position: absolute;
+        &:hover {
+            cursor: move;
+        }
     }
     img {
         //max-width: 100%;

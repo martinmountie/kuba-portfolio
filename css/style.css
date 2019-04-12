@@ -200,7 +200,8 @@ span.highlighted {
   position: fixed;
   top: 50px;
   right: 50px;
-  text-align: right; }
+  text-align: right;
+  z-index: 99999; }
 
 .row {
   display: -webkit-box;
@@ -266,29 +267,34 @@ span.highlighted {
         -ms-flex-pack: end;
             justify-content: flex-end; }
 
-.showTogether .masonry {
+.showTogether.masonry {
   -webkit-columns: 1;
           columns: 1;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -webkit-column-gap: 0px;
+          column-gap: 0px;
   width: 100%; }
 
-.showTogether .masonry-item {
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 20px; }
-
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .showTogether .masonry {
+  .showTogether.masonry {
     -webkit-columns: 2;
             columns: 2; } }
 
 @media only screen and (min-width: 1024px) {
-  .showTogether .masonry {
+  .showTogether.masonry {
     -webkit-columns: 3;
             columns: 3; } }
+
+.showTogether .masonry-item {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px !important; }
+  .showTogether .masonry-item h3, .showTogether .masonry-item span.tech {
+    display: none; }
 
 .showTogether .masonry-item, .showTogether .masonry-content {
   overflow: hidden;
   width: 100% !important;
   max-width: 100%; }
+  .showTogether .masonry-item img, .showTogether .masonry-content img {
+    width: 100% !important;
+    display: block; }

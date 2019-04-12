@@ -170,6 +170,7 @@ span.highlighted {
     top: 50px;
     right: 50px;
     text-align: right;
+    z-index: 99999;
 }
 .row {
     display: flex;

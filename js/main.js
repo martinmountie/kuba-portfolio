@@ -19,16 +19,19 @@ notDefaultLang.addEventListener("mouseover", function() {
     defaultLang.classList.remove("active");
 });
 
-var viewSwitcher = document.querySelectorAll(".view-switcher span");
+var viewSwitcher = document.querySelectorAll(".view-switcher span"),
+    masonry = document.querySelector(".masonry");
 
 Array.from(viewSwitcher).forEach(function (view) {
     view.addEventListener("click", function (e) {
         if (e.target === viewSwitcher[0]) {
             viewSwitcher[0].classList.add("active");
             viewSwitcher[1].classList.remove("active");
+            masonry.classList.remove("showTogether");
          } else {
             viewSwitcher[0].classList.remove("active");
             viewSwitcher[1].classList.add("active");
+            masonry.classList.add("showTogether");
          }
     });
 });

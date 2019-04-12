@@ -25,25 +25,19 @@
     &-left {
         justify-content: flex-start;
         .work-inner {
-            img:hover {
-                transform: translate(10px, -10px);
-            }
+           
         }
     }
     &-center {
         justify-content: center;
         .work-inner {
-            img:hover {
-                transform: translate(10px, -10px);                
-            }
+           
         }
     }
     &-right {
         justify-content: flex-end;
         .work-inner {
-            img:hover {
-                transform: translate(-10px, -10px);
-            }
+           
         }
     }
 

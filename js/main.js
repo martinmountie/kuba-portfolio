@@ -19,6 +19,21 @@ notDefaultLang.addEventListener("mouseover", function() {
     defaultLang.classList.remove("active");
 });
 
+var viewSwitcher = document.querySelectorAll(".view-switcher span");
+
+Array.from(viewSwitcher).forEach(function (view) {
+    view.addEventListener("click", function (e) {
+        if (e.target === viewSwitcher[0]) {
+            viewSwitcher[0].classList.add("active");
+            viewSwitcher[1].classList.remove("active");
+         } else {
+            viewSwitcher[0].classList.remove("active");
+            viewSwitcher[1].classList.add("active");
+         }
+    });
+});
+
+
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (document.getElementById(elmnt.id + "header")) {

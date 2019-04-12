@@ -9,6 +9,8 @@
     url("../fonts/TimesNewRamen-Regular.svg#TimesNewRamen-Regular") format("svg");
 }
 
+@import "reset.scss";
+
 * {
     box-sizing: border-box;
 }
@@ -112,6 +114,11 @@ span.highlighted {
 }
 .contact {
     font-size: 14px;
+    &-sub {
+        position: fixed;
+        bottom: 50px;
+        z-index: 99999;
+    }
 }
 
 .container {
@@ -130,17 +137,28 @@ span.highlighted {
     }
 }
 .lang-switcher {
-    text-align: right;
-    margin-bottom: 100px;
+    margin-bottom: 14px;
     a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.view-switcher {
+    margin-bottom: 70px;
+}
+.lang-switcher, .view-switcher {
+    text-align: right;
+    a, span {
         color: #000;
         z-index: 99;
         position: relative;
+        display: inline-block;
+        &:hover {
+            cursor: pointer;
+        }
         &:not(.active) {
             text-decoration: line-through;
-        }
-        &:hover {
-            text-decoration: none;
         }
         &.active {
             text-decoration: none;
@@ -148,9 +166,10 @@ span.highlighted {
     }
 }
 .right-top {
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 50px;
+    text-align: right;
 }
 .row {
     display: flex;
@@ -181,8 +200,7 @@ span.highlighted {
     width: 100%;
     &-image {
         width: 100%;
-        position: relative;
-        margin-top: 46px;
+        margin-top: 55px;
     }
 }
 @import "works.scss";

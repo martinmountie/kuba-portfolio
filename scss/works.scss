@@ -44,7 +44,7 @@
 }
 .showTogether {
     &.masonry {
-      columns: 1;
+        columns: 1;
       column-gap: 0px;
       width: 100%;
     }
@@ -57,6 +57,9 @@
         &.masonry {
             columns: 3;
         }
+        &.masonry.two-columns {
+            columns: 2;
+        }
     }
     .masonry-item {
         display: inline-block;
@@ -66,6 +69,7 @@
             display: none;
         }
     }
+    
     .masonry-item, .masonry-content {
         overflow: hidden;
         width: 100% !important;
@@ -73,6 +77,42 @@
         img {
             width: 100% !important;
             display: block;
+        }
+    }
+}
+
+.exhibitions {
+    .masonry {
+        padding-left: 310px;
+        &-content {
+            &:hover {
+                .masonry-content-text {
+                    display: block;
+                }
+            }
+            &-text {
+                display: none;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                h3 {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-weight: bold;
+                    display: block;
+                    font-size: 13px;
+                    margin: 5px 0;
+                    text-transform: uppercase;
+                    text-align: center;
+                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: #000;
+                }
+            }
         }
     }
 }
